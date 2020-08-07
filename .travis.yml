@@ -4,6 +4,7 @@ node_js:
 git:
   quiet: true
 after_success:
+- echo "${FTPUSER}"
 - curl --ftp-create-dirs
        -T ./dist/*
        ftp://${FTPUSER}:${FTPPASS}@ftp.vidaplena.nl/temp
