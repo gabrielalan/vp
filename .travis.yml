@@ -6,5 +6,5 @@ git:
 after_success:
 - echo "${FTPUSER}"
 - curl --ftp-create-dirs
-       -T ./dist/*
+       -T "{$(echo ./dist/* | tr ' ' ',')}"
        ftp://${FTPUSER}:${FTPPASS}@ftp.vidaplena.nl/temp
