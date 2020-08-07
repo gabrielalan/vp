@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 12
+git:
+  quiet: true
+after_success:
+- curl --ftp-create-dirs
+       -T ./dist/*
+       ftp://${FTPUSER}:${FTPPASS}@ftp.vidaplena.nl/temp
