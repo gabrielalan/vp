@@ -1,0 +1,33 @@
+{
+  "name": "vidaplena-website",
+  "version": "0.0.1",
+  "description": "Vida Plena Site",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielalan/vp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielalan/vp/issues"
+  },
+  "homepage": "https://github.com/gabrielalan/vp#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-icons": "^1.0.0-alpha5"
+  },
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
