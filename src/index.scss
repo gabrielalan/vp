@@ -53,6 +53,41 @@ body {
     align-items: center;
     position: relative;
 
+    .languages {
+        position: absolute;
+        top: 0;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 3px 3px 0 0px rgba(0, 0, 0, 0.1);
+
+        button {
+            background-color: white;
+            border: none;
+            text-transform: uppercase;
+            border-left: 1px solid #ccc;
+            padding: 10px 15px;
+            transition: all .2s ease-in-out;
+            color: #4a4a4a;
+
+            &.selected {
+                background-color: $main-blue;
+                color: white;
+            }
+
+            &:hover {
+                background-color: #eee;
+                color: #4a4a4a;
+            }
+
+            &:first-child {
+                border-radius: 0 0 0 8px;
+            }
+
+            &:last-child {
+                border-radius: 0 0 8px 0;
+            }
+        }
+    }
+
     #logo {
         display: block;
         background: white url('./images/logo.svg') center center no-repeat;
@@ -67,7 +102,7 @@ body {
     h1 {
         font-family: Playlist;
         color: white;
-        font-size: 70px;
+        font-size: 4rem;
         font-weight: 400;
         position: absolute;
         padding: 10px 40px;
@@ -75,6 +110,7 @@ body {
         bottom: -60px;
         box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
         transform: rotate(-3deg);
+        white-space: nowrap;
 
         background: #484d7b;
         background: -moz-linear-gradient(left,  #484d7b 0%, #ff07b3 100%);
@@ -89,24 +125,48 @@ body {
     padding-top: 100px;
     margin: 0 auto;
     text-align: center;
+    color: #4a4a4a;
 
     h2 {
         text-transform: uppercase;
         font-weight: normal;
         width: 55%;
         margin: 0 auto;
-        color: #4a4a4a;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    .hours {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-bottom: 1.9rem;
+
+        dt {
+            text-align: right;
+        }
+
+        dd {
+            text-align: left;
+            padding-left: 1rem;
+        }
+    }
+
+    .contact {
+        margin-bottom: 2rem;
     }
 
     .address {
-        display: flex;
+        display: inline-flex;
         background: $main-green;
-        width: 575px;
-        font-size: 18px;
+        font-size: 1.2rem;
         font-weight: 800;
         border-radius: 70px;
         color: white;
-        margin: 30px auto 60px;
+        margin: 30px auto 15px;
         box-shadow: 3px 5px rgba(0,0,0,.1);
         text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 
@@ -138,11 +198,19 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
 
         li {
             list-style: none;
-            margin: 0;
             padding: 0 20px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:left-child {
+                padding-right: 0;
+            }
 
             a {
                 background-position: left center;
@@ -150,11 +218,18 @@ body {
                 display: block;
                 padding: 30px;
                 width: 30px;
+                text-indent: -999rem;
+                overflow: hidden;
+                transition: opacity .2s ease-in-out;
 
                 &.facebook { background-image: url('./images/facebook.svg'); }
                 &.instagram { background-image: url('./images/instagram.svg'); }
                 &.youtube { background-image: url('./images/youtube.svg'); }
                 &.soundcloud { background-image: url('./images/soundcloud.svg'); }
+
+                &:hover {
+                  opacity: 0.7;
+                }
             }
         }
     }
@@ -164,11 +239,38 @@ footer {
     width: 600px;
     margin: 0 auto;
     text-align: center;
-    font-size: 12px;
+    font-size: 0.8rem;
     margin-top: 60px;
     color: #757575;
 
     p, address {
         margin: 0;
+    }
+}
+
+@media (max-width: 1139px) { 
+    footer {
+        width: 90%;
+    }
+
+    .body {
+        width: 100%;
+
+        h2 {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 565px) { 
+    .header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 440px) { 
+    .header h1 {
+        font-size: 2rem;
+        bottom: -40px;
     }
 }
