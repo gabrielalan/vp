@@ -23,8 +23,8 @@ function App() {
           <p className="contact">{t('Contato: +31 6 1665 8910 (WhatsApp)')}</p>
           <h4>{t('Horários de funcionamento')}</h4>
           <dl className="hours">
-              <dt>{t('Domingo')}</dt>
-              <dd>14:30</dd>
+              <dt>{t('Sábado')}</dt>
+              <dd>18:00</dd>
           </dl>
           <p className="contact"><b>{t('Culto nas casas')}</b> - <i>{t('Consulte no WhatsApp acima')}</i></p>
           <ul className="social">

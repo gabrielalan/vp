@@ -172,7 +172,7 @@ body {
 
         span {
             padding: 20px;
-            border-right: 2px solid darken($main-green, 10%);
+            border-right: 2px solid color.scale($main-green, $lightness: -10%);
         }
         
         a {
@@ -189,7 +189,7 @@ body {
             color: white;
 
             &:hover {
-                background-color: darken($main-green, 10%);
+                background-color: color.scale($main-green, $lightness: -10%);
             }
         }
     }
